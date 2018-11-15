@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		635A392BC0DC6B5E8BC5B817 /* Pods_FoodCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF1D46858882584E8A5FF4A /* Pods_FoodCloud.framework */; };
 		CB5DF3E1219DD5A3009AD176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DF3E0219DD5A3009AD176 /* AppDelegate.swift */; };
-		CB5DF3E3219DD5A3009AD176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DF3E2219DD5A3009AD176 /* ViewController.swift */; };
 		CB5DF3E6219DD5A3009AD176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E4219DD5A3009AD176 /* Main.storyboard */; };
 		CB5DF3E8219DD5A4009AD176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E7219DD5A4009AD176 /* Assets.xcassets */; };
 		CB5DF3EB219DD5A4009AD176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E9219DD5A4009AD176 /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		C4ECB1779A52A49BFECC48B3 /* Pods-FoodCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodCloud/Pods-FoodCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		CB5DF3DD219DD5A3009AD176 /* FoodCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5DF3E0219DD5A3009AD176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB5DF3E2219DD5A3009AD176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB5DF3E5219DD5A3009AD176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB5DF3E7219DD5A4009AD176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB5DF3EA219DD5A4009AD176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +47,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB1F3C07219DD9B900035F0F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CB5DF3E4219DD5A3009AD176 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CB1F3C08219DD9C200035F0F /* ViewCotrollers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewCotrollers;
+			sourceTree = "<group>";
+		};
+		CB1F3C09219DD9CF00035F0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB1F3C0A219DD9D300035F0F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CB1F3C0B219DD9DA00035F0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CB5DF3D4219DD5A3009AD176 = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +104,12 @@
 		CB5DF3DF219DD5A3009AD176 /* FoodCloud */ = {
 			isa = PBXGroup;
 			children = (
+				CB1F3C0A219DD9D300035F0F /* Services */,
+				CB1F3C0B219DD9DA00035F0F /* Models */,
+				CB1F3C09219DD9CF00035F0F /* Views */,
+				CB1F3C08219DD9C200035F0F /* ViewCotrollers */,
+				CB1F3C07219DD9B900035F0F /* Storyboard */,
 				CB5DF3E0219DD5A3009AD176 /* AppDelegate.swift */,
-				CB5DF3E2219DD5A3009AD176 /* ViewController.swift */,
-				CB5DF3E4219DD5A3009AD176 /* Main.storyboard */,
 				CB5DF3E7219DD5A4009AD176 /* Assets.xcassets */,
 				CB5DF3E9219DD5A4009AD176 /* LaunchScreen.storyboard */,
 				CB5DF3EC219DD5A4009AD176 /* Info.plist */,
@@ -214,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB5DF3E3219DD5A3009AD176 /* ViewController.swift in Sources */,
 				CB5DF3E1219DD5A3009AD176 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
