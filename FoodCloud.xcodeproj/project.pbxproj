@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635A392BC0DC6B5E8BC5B817 /* Pods_FoodCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF1D46858882584E8A5FF4A /* Pods_FoodCloud.framework */; };
 		CB5DF3E1219DD5A3009AD176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DF3E0219DD5A3009AD176 /* AppDelegate.swift */; };
 		CB5DF3E3219DD5A3009AD176 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DF3E2219DD5A3009AD176 /* ViewController.swift */; };
 		CB5DF3E6219DD5A3009AD176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E4219DD5A3009AD176 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A0166FFA85100BCE4351B0C /* Pods-FoodCloud.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodCloud.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodCloud/Pods-FoodCloud.release.xcconfig"; sourceTree = "<group>"; };
+		AFF1D46858882584E8A5FF4A /* Pods_FoodCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4ECB1779A52A49BFECC48B3 /* Pods-FoodCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodCloud.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodCloud/Pods-FoodCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		CB5DF3DD219DD5A3009AD176 /* FoodCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5DF3E0219DD5A3009AD176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5DF3E2219DD5A3009AD176 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635A392BC0DC6B5E8BC5B817 /* Pods_FoodCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2139A1E53619D68350FE34A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4ECB1779A52A49BFECC48B3 /* Pods-FoodCloud.debug.xcconfig */,
+				9A0166FFA85100BCE4351B0C /* Pods-FoodCloud.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CB5DF3D4219DD5A3009AD176 = {
 			isa = PBXGroup;
 			children = (
 				CB5DF3DF219DD5A3009AD176 /* FoodCloud */,
 				CB5DF3DE219DD5A3009AD176 /* Products */,
+				2139A1E53619D68350FE34A8 /* Pods */,
+				FA502AFAC4B04ED1EF7B003D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = FoodCloud;
 			sourceTree = "<group>";
 		};
+		FA502AFAC4B04ED1EF7B003D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFF1D46858882584E8A5FF4A /* Pods_FoodCloud.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB5DF3EF219DD5A4009AD176 /* Build configuration list for PBXNativeTarget "FoodCloud" */;
 			buildPhases = (
+				52B826088A08B41F778DE51B /* [CP] Check Pods Manifest.lock */,
 				CB5DF3D9219DD5A3009AD176 /* Sources */,
 				CB5DF3DA219DD5A3009AD176 /* Frameworks */,
 				CB5DF3DB219DD5A3009AD176 /* Resources */,
+				C52CF440A1B86025BEE9B0B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52B826088A08B41F778DE51B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodCloud-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C52CF440A1B86025BEE9B0B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FoodCloud/Pods-FoodCloud-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodCloud/Pods-FoodCloud-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB5DF3D9219DD5A3009AD176 /* Sources */ = {
@@ -280,6 +359,7 @@
 		};
 		CB5DF3F0219DD5A4009AD176 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4ECB1779A52A49BFECC48B3 /* Pods-FoodCloud.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +377,7 @@
 		};
 		CB5DF3F1219DD5A4009AD176 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A0166FFA85100BCE4351B0C /* Pods-FoodCloud.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
