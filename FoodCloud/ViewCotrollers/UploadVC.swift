@@ -10,7 +10,15 @@ import UIKit
 
 class UploadVC: UIViewController {
 
+    let imagePicker : UIImagePickerController = UIImagePickerController()
+    var imageArr: [UIImage] = [] {
+        didSet {
+            imgClV.reloadData()
+        
+        }
+    }
     @IBOutlet weak var imgClV: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupClV()
@@ -28,8 +36,55 @@ extension UploadVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = imgClV.dequeueReusableCell(withReuseIdentifier: "ImageUploadCell", for: indexPath) as! ImageUploadCell
+        cell.uploadImgV.applyRadius(radius: 3)
+        if indexPath.item != 0 {
+            cell.uploadImgV.image = #imageLiteral(resourceName: "imgNullimg")
+            cell.isUserInteractionEnabled = false
+        }
+        if imageArr.count > 0 && indexPath.item == 0 {
+            cell.uploadImgV.image = imageArr[indexPath.item]
+        }
+        return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        openGallery()
+    }
     
 }
+
+extension UploadVC:UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func openGallery() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            self.imagePicker.sourceType = .photoLibrary
+            self.imagePicker.delegate = self
+            
+            // false이면 이미지를 자르지 않고
+            // true면 자유자제로 크롭 가능
+            self.imagePicker.allowsEditing = true
+            self.present(self.imagePicker, animated: true, completion: { print("이미지 피커 나옴") })
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("사용자가 취소함")
+        self.dismiss(animated: true) {
+            print("이미지 피커 사라짐")
+        }
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            imageArr.append(editedImage)
+        } else if let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            imageArr.append(originalImage)
+        }
+        self.dismiss(animated: true) {
+            
+            self.imgClV.reloadData()
+        }
+    }
+
+}
+

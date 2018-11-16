@@ -38,6 +38,4 @@ extension GoneFoodFeedVC: UITableViewDelegate, UITableViewDataSource {
         let vc = UIStoryboard(name: "Food+Person", bundle: nil).instantiateViewController(withIdentifier: "FoodDetailVC") as! FoodDetailVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }
