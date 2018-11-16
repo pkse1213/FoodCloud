@@ -31,6 +31,10 @@
 		CB3A989D219E9673006DF777 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A989C219E9673006DF777 /* AddressData.swift */; };
 		CB3A989F219E96DD006DF777 /* LocationSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A989E219E96DD006DF777 /* LocationSearchCell.swift */; };
 		CB3A98A1219E9A65006DF777 /* UIColor+rgb.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A98A0219E9A65006DF777 /* UIColor+rgb.swift */; };
+		CB3A98A3219EE0B5006DF777 /* SellerInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A98A2219EE0B5006DF777 /* SellerInfoVC.swift */; };
+		CB3A98A5219EE523006DF777 /* SellerInfoFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A98A4219EE523006DF777 /* SellerInfoFoodCell.swift */; };
+		CB3A98A7219F0378006DF777 /* FoodDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A98A6219F0378006DF777 /* FoodDetailCell.swift */; };
+		CB3A98A9219F038B006DF777 /* FoodDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3A98A8219F038B006DF777 /* FoodDetailVC.swift */; };
 		CB3DFB20219DF1CD00615D25 /* MainFoodFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3DFB1F219DF1CD00615D25 /* MainFoodFeedCell.swift */; };
 		CB5DF3E1219DD5A3009AD176 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5DF3E0219DD5A3009AD176 /* AppDelegate.swift */; };
 		CB5DF3E6219DD5A3009AD176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E4219DD5A3009AD176 /* Main.storyboard */; };
@@ -65,6 +69,10 @@
 		CB3A989C219E9673006DF777 /* AddressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
 		CB3A989E219E96DD006DF777 /* LocationSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchCell.swift; sourceTree = "<group>"; };
 		CB3A98A0219E9A65006DF777 /* UIColor+rgb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgb.swift"; sourceTree = "<group>"; };
+		CB3A98A2219EE0B5006DF777 /* SellerInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoVC.swift; sourceTree = "<group>"; };
+		CB3A98A4219EE523006DF777 /* SellerInfoFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerInfoFoodCell.swift; sourceTree = "<group>"; };
+		CB3A98A6219F0378006DF777 /* FoodDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailCell.swift; sourceTree = "<group>"; };
+		CB3A98A8219F038B006DF777 /* FoodDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailVC.swift; sourceTree = "<group>"; };
 		CB3DFB1F219DF1CD00615D25 /* MainFoodFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFoodFeedCell.swift; sourceTree = "<group>"; };
 		CB5DF3DD219DD5A3009AD176 /* FoodCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5DF3E0219DD5A3009AD176 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +124,8 @@
 				CB1F3C2C219DDD4600035F0F /* UploadVC.swift */,
 				CB1F3C33219DE0C000035F0F /* MessageVC.swift */,
 				CB3A989A219E9637006DF777 /* LocationSearchVC.swift */,
+				CB3A98A2219EE0B5006DF777 /* SellerInfoVC.swift */,
+				CB3A98A8219F038B006DF777 /* FoodDetailVC.swift */,
 			);
 			path = ViewCotrollers;
 			sourceTree = "<group>";
@@ -127,6 +137,8 @@
 				CB1F3C3D219DE1BE00035F0F /* SendMessageCell.swift */,
 				CB3DFB1F219DF1CD00615D25 /* MainFoodFeedCell.swift */,
 				CB3A989E219E96DD006DF777 /* LocationSearchCell.swift */,
+				CB3A98A4219EE523006DF777 /* SellerInfoFoodCell.swift */,
+				CB3A98A6219F0378006DF777 /* FoodDetailCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB3A989D219E9673006DF777 /* AddressData.swift in Sources */,
+				CB3A98A9219F038B006DF777 /* FoodDetailVC.swift in Sources */,
 				CB1F3C21219DDC1600035F0F /* HTTPStatusCode.swift in Sources */,
 				CB1F3C23219DDC1600035F0F /* NetworkResult.swift in Sources */,
 				CB1F3C2B219DDD3800035F0F /* GoneFoodFeedVC.swift in Sources */,
@@ -350,11 +363,14 @@
 				CB1F3C27219DDD1700035F0F /* MyPageVC.swift in Sources */,
 				CB1F3C22219DDC1600035F0F /* APIService.swift in Sources */,
 				CB1F3C34219DE0C000035F0F /* MessageVC.swift in Sources */,
+				CB3A98A7219F0378006DF777 /* FoodDetailCell.swift in Sources */,
 				CB1F3C20219DDC1600035F0F /* RequestService.swift in Sources */,
 				CB3A98A1219E9A65006DF777 /* UIColor+rgb.swift in Sources */,
 				CB1F3C3B219DE12F00035F0F /* UIViewController+extesion.swift in Sources */,
 				CB3A9897219E9587006DF777 /* KakaoAddressService.swift in Sources */,
 				CB1F3C3F219DE1BE00035F0F /* SendMessageCell.swift in Sources */,
+				CB3A98A3219EE0B5006DF777 /* SellerInfoVC.swift in Sources */,
+				CB3A98A5219EE523006DF777 /* SellerInfoFoodCell.swift in Sources */,
 				CB3A989B219E9637006DF777 /* LocationSearchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,9 +10,11 @@ import UIKit
 
 class SellerInfoFoodCell: UITableViewCell {
 
+    @IBOutlet weak var sqaureView: UIView!
+    @IBOutlet weak var foodImgV: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

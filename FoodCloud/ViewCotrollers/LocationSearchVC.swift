@@ -11,8 +11,8 @@ import UIKit
 class LocationSearchVC: UIViewController {
     
     let cellId = "LocationSearchCell"
-    var addressArr = ["서울시 마포구 상수동 22-1", "서울시 은평구 대조동 84-21" , "서울시 노원구 공릉동 91-32", "서울시 은평구 역촌동 82-21"]
-    
+    var addressArr = [ "서울시 은평구 대조동 84-32" ,"서울시 마포구 연남동 364-8", "홍익대학교 서울캠퍼스"]
+    var roadArr = ["서울 은평구 통일로71가길 27-15", "서울 마포구 연남로 83", "서울 마포구 와우산로 231"]
     var searchAddress: [Address] = []
     var flag = false
     
@@ -24,6 +24,7 @@ class LocationSearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
     }
     
     private func setupView() {
@@ -67,7 +68,6 @@ class LocationSearchVC: UIViewController {
             searchResultTitle.text = "주소 검색 결과 \"" + gsno(sender.text) + "\""
         }
     }
-    
 }
 
 extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
@@ -82,13 +82,13 @@ extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
         } else {
             return searchAddress.count
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = searchTableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! LocationSearchCell
         if !flag {
             cell.addressLabel.text = addressArr[indexPath.row]
+            cell.roadAddressLabel.text = roadArr[indexPath.row]
             cell.deleteButton.tag = indexPath.row
             cell.deleteButton.addTarget(self, action: #selector(deleteCellFromButton(button:)), for: .touchUpInside)
             cell.deleteButton.isHidden = false
@@ -104,10 +104,14 @@ extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
     
     @objc func deleteCellFromButton(button: UIButton) {
         addressArr.remove(at: button.tag)
+        roadArr.remove(at: button.tag)
         searchTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(searchAddress[indexPath.row].x)
+        print(searchAddress[indexPath.row].y)
+        NotificationCenter.default.post(name: Notification.Name("setAddress"), object: searchAddress[indexPath.row])
         self.dismiss(animated: true, completion: nil)
         
     }

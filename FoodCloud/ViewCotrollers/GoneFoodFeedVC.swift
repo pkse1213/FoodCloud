@@ -9,22 +9,35 @@
 import UIKit
 
 class GoneFoodFeedVC: UIViewController {
-
+    @IBOutlet weak var FoodFeedTvC: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        
+    }
+    private func setupTableView(){
+        FoodFeedTvC.delegate = self
+        FoodFeedTvC.dataSource = self
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension GoneFoodFeedVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = FoodFeedTvC.dequeueReusableCell(withIdentifier: "MainFoodFeedCell") as! MainFoodFeedCell
+        cell.soldOutView.applyRadius(radius: 10)
+        return cell
+        
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "Food+Person", bundle: nil).instantiateViewController(withIdentifier: "FoodDetailVC") as! FoodDetailVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
 }
