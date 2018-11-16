@@ -41,6 +41,12 @@
 		CB5DF3E6219DD5A3009AD176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E4219DD5A3009AD176 /* Main.storyboard */; };
 		CB5DF3E8219DD5A4009AD176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E7219DD5A4009AD176 /* Assets.xcassets */; };
 		CB5DF3EB219DD5A4009AD176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5DF3E9219DD5A4009AD176 /* LaunchScreen.storyboard */; };
+		CBBB3E5F219F792200CB0F88 /* FoodListByTimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E5E219F792200CB0F88 /* FoodListByTimeData.swift */; };
+		CBBB3E61219F797A00CB0F88 /* FoodByTimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E60219F797A00CB0F88 /* FoodByTimeService.swift */; };
+		CBBB3E63219F83CD00CB0F88 /* FoodListByDistanceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E62219F83CD00CB0F88 /* FoodListByDistanceData.swift */; };
+		CBBB3E65219F84AA00CB0F88 /* FoodByDistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E64219F84AA00CB0F88 /* FoodByDistanceService.swift */; };
+		CBBB3E67219F8F3F00CB0F88 /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E66219F8F3F00CB0F88 /* UserInfoData.swift */; };
+		CBBB3E69219F8F6D00CB0F88 /* UserInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E68219F8F6D00CB0F88 /* UserInfoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +88,12 @@
 		CB5DF3E7219DD5A4009AD176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB5DF3EA219DD5A4009AD176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB5DF3EC219DD5A4009AD176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBBB3E5E219F792200CB0F88 /* FoodListByTimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListByTimeData.swift; sourceTree = "<group>"; };
+		CBBB3E60219F797A00CB0F88 /* FoodByTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodByTimeService.swift; sourceTree = "<group>"; };
+		CBBB3E62219F83CD00CB0F88 /* FoodListByDistanceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListByDistanceData.swift; sourceTree = "<group>"; };
+		CBBB3E64219F84AA00CB0F88 /* FoodByDistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodByDistanceService.swift; sourceTree = "<group>"; };
+		CBBB3E66219F8F3F00CB0F88 /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
+		CBBB3E68219F8F6D00CB0F88 /* UserInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +166,9 @@
 				CB1F3C1D219DDC1600035F0F /* HTTPStatusCode.swift */,
 				CB1F3C1F219DDC1600035F0F /* NetworkResult.swift */,
 				CB1F3C1C219DDC1600035F0F /* RequestService.swift */,
+				CBBB3E60219F797A00CB0F88 /* FoodByTimeService.swift */,
+				CBBB3E64219F84AA00CB0F88 /* FoodByDistanceService.swift */,
+				CBBB3E68219F8F6D00CB0F88 /* UserInfoService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				CB3A989C219E9673006DF777 /* AddressData.swift */,
+				CBBB3E5E219F792200CB0F88 /* FoodListByTimeData.swift */,
+				CBBB3E62219F83CD00CB0F88 /* FoodListByDistanceData.swift */,
+				CBBB3E66219F8F3F00CB0F88 /* UserInfoData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,14 +374,20 @@
 				CB1F3C2B219DDD3800035F0F /* GoneFoodFeedVC.swift in Sources */,
 				CB1F3C2D219DDD4600035F0F /* UploadVC.swift in Sources */,
 				CB5DF3E1219DD5A3009AD176 /* AppDelegate.swift in Sources */,
+				CBBB3E65219F84AA00CB0F88 /* FoodByDistanceService.swift in Sources */,
+				CBBB3E63219F83CD00CB0F88 /* FoodListByDistanceData.swift in Sources */,
+				CBBB3E69219F8F6D00CB0F88 /* UserInfoService.swift in Sources */,
 				CB3A989F219E96DD006DF777 /* LocationSearchCell.swift in Sources */,
 				CB1F3C29219DDD2700035F0F /* EventVC.swift in Sources */,
 				CB1F3C39219DE12800035F0F /* UIView+applyDesign.swift in Sources */,
+				CBBB3E61219F797A00CB0F88 /* FoodByTimeService.swift in Sources */,
 				CB3DFB20219DF1CD00615D25 /* MainFoodFeedCell.swift in Sources */,
 				CB1F3C3E219DE1BE00035F0F /* RecieveMessageCell.swift in Sources */,
 				CB1F3C37219DE11900035F0F /* UIImageVIew+imageFromUrl.swift in Sources */,
 				CB1F3C25219DDD0C00035F0F /* MainFoodFeedVC.swift in Sources */,
 				CB1F3C27219DDD1700035F0F /* MyPageVC.swift in Sources */,
+				CBBB3E67219F8F3F00CB0F88 /* UserInfoData.swift in Sources */,
+				CBBB3E5F219F792200CB0F88 /* FoodListByTimeData.swift in Sources */,
 				CB3A98AB219F34CA006DF777 /* ImageUploadCell.swift in Sources */,
 				CB1F3C22219DDC1600035F0F /* APIService.swift in Sources */,
 				CB1F3C34219DE0C000035F0F /* MessageVC.swift in Sources */,

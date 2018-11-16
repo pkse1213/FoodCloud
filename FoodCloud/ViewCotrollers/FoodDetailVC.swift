@@ -10,19 +10,21 @@ import UIKit
 
 class FoodDetailVC: UIViewController {
 
+    var disFood: FoodByDis?
+    var timeFood: FoodByTime?
+    
     @IBOutlet weak var foodDetailTbV: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = " "
         setupTbV()
         setNoti()
         setupNavi()
-        
     }
-    
+   
     private func setupNavi() {
         let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
-        
         navigationItem.titleView = imv
     }
     
@@ -58,6 +60,23 @@ extension FoodDetailVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = foodDetailTbV.dequeueReusableCell(withIdentifier: "FoodDetailCell") as! FoodDetailCell
+        if let food = disFood {
+            cell.nameLbl.text = food.userName
+            cell.imageBtn.imageView?.imageFromUrl(food.userProfile, defaultImgPath: "")
+            cell.foodNameLbl.text = food.postsTitle
+            cell.expireLbl.text = "유통기한: " + food.postsExpire
+            cell.foodImgV.imageFromUrl(food.postsImg, defaultImgPath: "")
+            cell.timeLbl.text = "일요일 오후 4시"
+            cell.infoLbl.text = food.postsInfo
+        } else if let food = timeFood {
+            cell.nameLbl.text = food.userName
+            cell.imageBtn.imageView?.imageFromUrl(food.userProfile, defaultImgPath: "")
+            cell.foodNameLbl.text = food.postsTitle
+            cell.expireLbl.text = "유통기한: " + food.postsExpire
+            cell.foodImgV.imageFromUrl(food.postsImg, defaultImgPath: "")
+            cell.timeLbl.text = "일요일 오후 4시"
+            cell.infoLbl.text = food.postsInfo
+        }
         return cell
     }
     

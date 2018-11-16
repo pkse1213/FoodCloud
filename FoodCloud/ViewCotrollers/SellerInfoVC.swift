@@ -18,14 +18,18 @@ class SellerInfoVC: UIViewController {
     @IBOutlet weak var leftBtn: UIButton!
     @IBOutlet weak var rightBtn: UIButton!
     
+    var userid = 0
+    var info: UserInfo?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTbV()
         setupView()
         setupNavi()
-        
     }
     
+    private func initData() {
+        
+    }
     private func setupNavi() {
         let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
         

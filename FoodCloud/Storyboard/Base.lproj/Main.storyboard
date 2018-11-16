@@ -186,7 +186,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="JCx-0i-H4B"/>
                     <connections>
-                        <outlet property="FoodFeedTvC" destination="5VW-lF-J5c" id="6DF-yA-HAB"/>
+                        <outlet property="foodFeedTvC" destination="5VW-lF-J5c" id="ioX-RJ-TZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uII-tx-sQf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,7 +248,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKI-TC-lds">
-                                                            <rect key="frame" x="16" y="287.5" width="32" height="32"/>
+                                                            <rect key="frame" x="14" y="286" width="32" height="32"/>
                                                             <color key="backgroundColor" red="0.63142143731769829" green="0.39505271767599637" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="6qY-id-1GB"/>
@@ -282,7 +282,7 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박세은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ss-AH-Q5f">
-                                                            <rect key="frame" x="61" y="294.5" width="39" height="18"/>
+                                                            <rect key="frame" x="56" y="293" width="39" height="18"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -294,8 +294,8 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버섯 샐러드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-Wb-c85">
-                                                            <rect key="frame" x="16" y="252" width="111" height="29"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                            <rect key="frame" x="14" y="252" width="101" height="26.5"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -316,7 +316,7 @@
                                                     <constraints>
                                                         <constraint firstItem="Csd-Wb-c85" firstAttribute="top" secondItem="JLO-9o-VAT" secondAttribute="bottom" constant="16" id="0Ne-wA-idh"/>
                                                         <constraint firstItem="JLO-9o-VAT" firstAttribute="top" secondItem="ydb-wO-Aaq" secondAttribute="bottom" constant="8" id="0RG-mF-kz0"/>
-                                                        <constraint firstItem="8ss-AH-Q5f" firstAttribute="leading" secondItem="hKI-TC-lds" secondAttribute="trailing" constant="13" id="2tx-iF-0lX"/>
+                                                        <constraint firstItem="8ss-AH-Q5f" firstAttribute="leading" secondItem="hKI-TC-lds" secondAttribute="trailing" constant="10" id="2tx-iF-0lX"/>
                                                         <constraint firstItem="DT4-Z0-FPD" firstAttribute="top" secondItem="wBX-VL-yZ5" secondAttribute="bottom" constant="13" id="5GZ-3j-gmd"/>
                                                         <constraint firstItem="hKI-TC-lds" firstAttribute="firstBaseline" secondItem="Csd-Wb-c85" secondAttribute="baseline" constant="14" id="5PB-W0-Of8"/>
                                                         <constraint firstItem="8ss-AH-Q5f" firstAttribute="centerY" secondItem="hKI-TC-lds" secondAttribute="centerY" id="AMX-Yf-cNz"/>
@@ -332,7 +332,7 @@
                                                         <constraint firstItem="MFJ-fR-guz" firstAttribute="leading" secondItem="ydb-wO-Aaq" secondAttribute="trailing" constant="4" id="U1m-XT-Dww"/>
                                                         <constraint firstItem="ydb-wO-Aaq" firstAttribute="top" secondItem="utP-oH-I7W" secondAttribute="top" constant="16" id="UCa-tt-BHV"/>
                                                         <constraint firstItem="58K-HG-BHQ" firstAttribute="trailing" secondItem="JLO-9o-VAT" secondAttribute="trailing" constant="-16" id="VPe-C5-sCk"/>
-                                                        <constraint firstItem="Csd-Wb-c85" firstAttribute="leading" secondItem="utP-oH-I7W" secondAttribute="leading" constant="16" id="Xdn-sQ-Et7"/>
+                                                        <constraint firstItem="Csd-Wb-c85" firstAttribute="leading" secondItem="utP-oH-I7W" secondAttribute="leading" constant="14" id="Xdn-sQ-Et7"/>
                                                         <constraint firstItem="IfP-16-miE" firstAttribute="top" secondItem="utP-oH-I7W" secondAttribute="top" constant="17" id="d78-xd-2Op"/>
                                                         <constraint firstItem="v8A-Jo-Rnc" firstAttribute="trailing" secondItem="58K-HG-BHQ" secondAttribute="trailing" constant="-12" id="hg1-wk-mmk"/>
                                                         <constraint firstItem="JLO-9o-VAT" firstAttribute="leading" secondItem="utP-oH-I7W" secondAttribute="leading" constant="8" id="njO-wH-XRb"/>
@@ -382,7 +382,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="FoodFeedTvC" destination="BgA-7b-4AK" id="VkY-ak-Eux"/>
+                        <outlet property="foodFeedTvC" destination="BgA-7b-4AK" id="VHF-YV-djg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeB-j6-JdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

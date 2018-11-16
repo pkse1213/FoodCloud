@@ -29,7 +29,7 @@ class MainFoodFeedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         squareView.applyRadius(radius: 10)
-        sellerImgV.applyRadius(radius: 15)
+        sellerImgV.applyRadius(radius: 16)
         foodImgV.applyRadius(radius: 15)
         
     }

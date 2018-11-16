@@ -9,34 +9,54 @@
 import UIKit
 
 class GoneFoodFeedVC: UIViewController {
-    @IBOutlet weak var FoodFeedTvC: UITableView!
+    @IBOutlet weak var foodFeedTvC: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupNavi()
-        
+        dataByTime()
     }
-    
+    var foodByTimeList = [FoodByTime]() {
+        didSet {
+            foodFeedTvC.reloadData()
+        }
+    }
     private func setupNavi() {
         let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
         
         navigationItem.titleView = imv
     }
     private func setupTableView(){
-        FoodFeedTvC.delegate = self
-        FoodFeedTvC.dataSource = self
+        foodFeedTvC.delegate = self
+        foodFeedTvC.dataSource = self
+    }
+    
+    private func dataByTime() {
+        FoodByTimeService.shareInstance.getListByTime(completion: { (foods) in
+            self.foodByTimeList = foods
+        }) { (err) in
+            print("최신순 실패")
+        }
     }
 }
 
 extension GoneFoodFeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return foodByTimeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = FoodFeedTvC.dequeueReusableCell(withIdentifier: "MainFoodFeedCell") as! MainFoodFeedCell
+        let cell = foodFeedTvC.dequeueReusableCell(withIdentifier: "MainFoodFeedCell") as! MainFoodFeedCell
         cell.soldOutView.applyRadius(radius: 10)
+        let food = foodByTimeList[indexPath.row]
+        cell.addressLbl.text = food.postsPlaces
+        cell.dateLabel.text = "유통기한: " + food.postsExpire
+        cell.foodNameLbl.text = food.postsTitle
+        cell.SellernameLbl.text = food.userName
+        cell.foodImgV.imageFromUrl(food.postsImg, defaultImgPath: "")
+        cell.sellerImgV.imageFromUrl(food.userProfile, defaultImgPath: "")
+        cell.distanceLbl.isHidden = true
         return cell
         
     }
