@@ -24,9 +24,16 @@ class LocationSearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupNavi()
+        
+    }
+    
+    private func setupNavi() {
+        let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
+        
+        navigationItem.titleView = imv
     }
     private func setupView() {
-        self.title = "주소 검색"
         searchTableView.delegate = self
         searchTableView.dataSource = self
         searchBarView.applyRadius(radius: 17.5)

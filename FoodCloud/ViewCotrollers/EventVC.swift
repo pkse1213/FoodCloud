@@ -17,8 +17,14 @@ class EventVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupNavi()
     }
     
+    private func setupNavi() {
+        let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
+        
+        navigationItem.titleView = imv
+    }
     private func setupView() {
         rightBar.isHidden = true
     }

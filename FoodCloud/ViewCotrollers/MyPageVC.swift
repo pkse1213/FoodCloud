@@ -22,6 +22,14 @@ class MyPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavi()
+        
+    }
+    
+    private func setupNavi() {
+        let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
+        
+        navigationItem.titleView = imv
     }
     
     private func setupView() {

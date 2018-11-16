@@ -40,11 +40,11 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZA2-gW-r9S">
-                                                            <rect key="frame" x="16" y="289.5" width="30" height="30"/>
+                                                            <rect key="frame" x="16" y="287.5" width="32" height="32"/>
                                                             <color key="backgroundColor" red="0.6314214373" green="0.3950527177" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="30" id="fnN-EM-bkx"/>
-                                                                <constraint firstAttribute="height" constant="30" id="tY2-D8-DqQ"/>
+                                                                <constraint firstAttribute="width" constant="32" id="fnN-EM-bkx"/>
+                                                                <constraint firstAttribute="height" constant="32" id="tY2-D8-DqQ"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 성동구 성수동2가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Siy-J1-G2G">
@@ -74,8 +74,8 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박세은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOY-Pf-Hqn">
-                                                            <rect key="frame" x="62" y="296" width="37" height="17"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <rect key="frame" x="61" y="294.5" width="39" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -115,7 +115,7 @@
                                                         <constraint firstItem="69u-2d-loZ" firstAttribute="trailing" secondItem="9qP-3s-A3G" secondAttribute="trailing" constant="-16" id="CQI-Im-GXA"/>
                                                         <constraint firstItem="9qz-pU-6se" firstAttribute="trailing" secondItem="t94-3v-W4M" secondAttribute="trailing" id="Gzf-kp-nXa"/>
                                                         <constraint firstItem="9ED-vb-con" firstAttribute="leading" secondItem="Sj3-73-Pcr" secondAttribute="leading" constant="16" id="Jta-jo-8aK"/>
-                                                        <constraint firstItem="YOY-Pf-Hqn" firstAttribute="leading" secondItem="ZA2-gW-r9S" secondAttribute="trailing" constant="16" id="MOF-ke-Uhc"/>
+                                                        <constraint firstItem="YOY-Pf-Hqn" firstAttribute="leading" secondItem="ZA2-gW-r9S" secondAttribute="trailing" constant="13" id="MOF-ke-Uhc"/>
                                                         <constraint firstItem="ELR-dQ-GJY" firstAttribute="top" secondItem="Sj3-73-Pcr" secondAttribute="top" constant="17" id="PM4-AB-AkC"/>
                                                         <constraint firstItem="9ED-vb-con" firstAttribute="top" secondItem="Sj3-73-Pcr" secondAttribute="top" constant="16" id="RSn-Fb-wHc"/>
                                                         <constraint firstItem="3zz-PM-N2n" firstAttribute="leading" secondItem="Sj3-73-Pcr" secondAttribute="leading" constant="16" id="U3g-He-thI"/>
@@ -125,7 +125,7 @@
                                                         <constraint firstItem="t94-3v-W4M" firstAttribute="top" secondItem="9qP-3s-A3G" secondAttribute="bottom" constant="22" id="eUy-h5-b8h"/>
                                                         <constraint firstItem="YOY-Pf-Hqn" firstAttribute="centerY" secondItem="ZA2-gW-r9S" secondAttribute="centerY" id="iwO-Wa-prM"/>
                                                         <constraint firstAttribute="width" secondItem="Sj3-73-Pcr" secondAttribute="height" multiplier="359:336" id="m2V-64-gIO"/>
-                                                        <constraint firstItem="ZA2-gW-r9S" firstAttribute="firstBaseline" secondItem="3zz-PM-N2n" secondAttribute="baseline" constant="16" id="n3y-lC-Q4Z"/>
+                                                        <constraint firstItem="ZA2-gW-r9S" firstAttribute="firstBaseline" secondItem="3zz-PM-N2n" secondAttribute="baseline" constant="14" id="n3y-lC-Q4Z"/>
                                                         <constraint firstItem="ZA2-gW-r9S" firstAttribute="leading" secondItem="3zz-PM-N2n" secondAttribute="leading" id="oMK-BI-H1y"/>
                                                         <constraint firstItem="Siy-J1-G2G" firstAttribute="leading" secondItem="9ED-vb-con" secondAttribute="trailing" constant="4" id="obM-2g-OTj"/>
                                                         <constraint firstItem="9qP-3s-A3G" firstAttribute="leading" secondItem="Sj3-73-Pcr" secondAttribute="leading" constant="8" id="qGi-2r-eIA"/>
@@ -193,7 +193,7 @@
             </objects>
             <point key="canvasLocation" x="481" y="-307"/>
         </scene>
-        <!--Food-->
+        <!--Main Food FeedVC-->
         <scene sceneID="o2u-M2-Hsm">
             <objects>
                 <viewController id="tM4-Cf-ZrD" customClass="MainFoodFeedVC" customModule="FoodCloud" customModuleProvider="target" sceneMemberID="viewController">
@@ -248,11 +248,11 @@
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hKI-TC-lds">
-                                                            <rect key="frame" x="16" y="289.5" width="30" height="30"/>
+                                                            <rect key="frame" x="16" y="287.5" width="32" height="32"/>
                                                             <color key="backgroundColor" red="0.63142143731769829" green="0.39505271767599637" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="30" id="6qY-id-1GB"/>
-                                                                <constraint firstAttribute="width" constant="30" id="gUv-bQ-y58"/>
+                                                                <constraint firstAttribute="height" constant="32" id="6qY-id-1GB"/>
+                                                                <constraint firstAttribute="width" constant="32" id="gUv-bQ-y58"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울 성동구 성수동2가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFJ-fR-guz">
@@ -282,8 +282,8 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박세은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ss-AH-Q5f">
-                                                            <rect key="frame" x="62" y="296" width="37" height="17"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                            <rect key="frame" x="61" y="294.5" width="39" height="18"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -316,9 +316,9 @@
                                                     <constraints>
                                                         <constraint firstItem="Csd-Wb-c85" firstAttribute="top" secondItem="JLO-9o-VAT" secondAttribute="bottom" constant="16" id="0Ne-wA-idh"/>
                                                         <constraint firstItem="JLO-9o-VAT" firstAttribute="top" secondItem="ydb-wO-Aaq" secondAttribute="bottom" constant="8" id="0RG-mF-kz0"/>
-                                                        <constraint firstItem="8ss-AH-Q5f" firstAttribute="leading" secondItem="hKI-TC-lds" secondAttribute="trailing" constant="16" id="2tx-iF-0lX"/>
+                                                        <constraint firstItem="8ss-AH-Q5f" firstAttribute="leading" secondItem="hKI-TC-lds" secondAttribute="trailing" constant="13" id="2tx-iF-0lX"/>
                                                         <constraint firstItem="DT4-Z0-FPD" firstAttribute="top" secondItem="wBX-VL-yZ5" secondAttribute="bottom" constant="13" id="5GZ-3j-gmd"/>
-                                                        <constraint firstItem="hKI-TC-lds" firstAttribute="firstBaseline" secondItem="Csd-Wb-c85" secondAttribute="baseline" constant="16" id="5PB-W0-Of8"/>
+                                                        <constraint firstItem="hKI-TC-lds" firstAttribute="firstBaseline" secondItem="Csd-Wb-c85" secondAttribute="baseline" constant="14" id="5PB-W0-Of8"/>
                                                         <constraint firstItem="8ss-AH-Q5f" firstAttribute="centerY" secondItem="hKI-TC-lds" secondAttribute="centerY" id="AMX-Yf-cNz"/>
                                                         <constraint firstItem="v8A-Jo-Rnc" firstAttribute="centerY" secondItem="58K-HG-BHQ" secondAttribute="centerY" constant="1" id="F8o-Cx-Gg0"/>
                                                         <constraint firstItem="58K-HG-BHQ" firstAttribute="bottom" secondItem="JLO-9o-VAT" secondAttribute="bottom" constant="-16" id="GqF-V4-AuR"/>
@@ -375,7 +375,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tRh-Ae-Bdn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Food" id="2fC-2z-q5o">
+                    <navigationItem key="navigationItem" id="2fC-2z-q5o">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Vxb-b8-R72"/>
                         <barButtonItem key="rightBarButtonItem" image="icMessageActive32" id="py6-TZ-dAu">
                             <color key="tintColor" red="1" green="0.52549019610000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </barButtonItem>
@@ -451,7 +452,7 @@
             </objects>
             <point key="canvasLocation" x="-458" y="-307"/>
         </scene>
-        <!--냉장고에 담기-->
+        <!--UploadVC-->
         <scene sceneID="0zq-BW-Jf0">
             <objects>
                 <viewController id="YpQ-vv-jpY" customClass="UploadVC" customModule="FoodCloud" customModuleProvider="target" sceneMemberID="viewController">
@@ -684,7 +685,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="206-af-8tw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="냉장고에 담기" id="2LL-SU-vQR">
+                    <navigationItem key="navigationItem" id="2LL-SU-vQR">
                         <barButtonItem key="backBarButtonItem" title=" " id="fFw-TA-hUE"/>
                         <barButtonItem key="rightBarButtonItem" title="올리기" id="TAZ-ZV-sUu">
                             <color key="tintColor" red="1" green="0.52549019610000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -706,7 +707,7 @@
             </objects>
             <point key="canvasLocation" x="480.80000000000001" y="350.37481259370315"/>
         </scene>
-        <!--이벤트-->
+        <!--EventVC-->
         <scene sceneID="zXm-ja-TwH">
             <objects>
                 <viewController id="oVo-Eg-pbR" customClass="EventVC" customModule="FoodCloud" customModuleProvider="target" sceneMemberID="viewController">
@@ -737,6 +738,14 @@
                                     <action selector="rankAction:" destination="oVo-Eg-pbR" eventType="touchUpInside" id="q8N-Gd-OFj"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d96-ja-wvM">
+                                <rect key="frame" x="0.0" y="105" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="5qF-mZ-ogw"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Y0L-UP-h7o"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAT-Us-Nf7">
                                 <rect key="frame" x="50" y="104" width="88" height="2"/>
                                 <color key="backgroundColor" red="1" green="0.52549019610000003" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -766,11 +775,14 @@
                             <constraint firstItem="6pQ-dl-R3X" firstAttribute="width" secondItem="E7e-jg-Ahq" secondAttribute="width" multiplier="1:2" id="YsT-Vt-sJr"/>
                             <constraint firstItem="nAT-Us-Nf7" firstAttribute="top" secondItem="6pQ-dl-R3X" secondAttribute="bottom" id="ZHg-9R-nI5"/>
                             <constraint firstItem="1Vd-ZU-fay" firstAttribute="centerX" secondItem="VIE-8o-D0A" secondAttribute="centerX" id="bo4-Sk-gfe"/>
+                            <constraint firstAttribute="trailing" secondItem="d96-ja-wvM" secondAttribute="trailing" id="hIE-5b-rfe"/>
+                            <constraint firstItem="d96-ja-wvM" firstAttribute="leading" secondItem="E7e-jg-Ahq" secondAttribute="leading" id="kLi-or-TRU"/>
                             <constraint firstItem="nAT-Us-Nf7" firstAttribute="centerX" secondItem="6pQ-dl-R3X" secondAttribute="centerX" id="pNt-6o-FbG"/>
+                            <constraint firstItem="d96-ja-wvM" firstAttribute="bottom" secondItem="nAT-Us-Nf7" secondAttribute="bottom" id="tVp-8m-IsI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ojG-r2-fcu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="이벤트" id="pNa-ij-Ovt"/>
+                    <navigationItem key="navigationItem" id="pNa-ij-Ovt"/>
                     <connections>
                         <outlet property="eventBtn" destination="6pQ-dl-R3X" id="ZKn-9H-sjG"/>
                         <outlet property="leftBar" destination="nAT-Us-Nf7" id="2XQ-6K-9Fg"/>
@@ -782,7 +794,7 @@
             </objects>
             <point key="canvasLocation" x="480.80000000000001" y="1011.544227886057"/>
         </scene>
-        <!--마이페이지-->
+        <!--My PageVC-->
         <scene sceneID="FCG-uw-luU">
             <objects>
                 <viewController id="FTA-sh-EhX" customClass="MyPageVC" customModule="FoodCloud" customModuleProvider="target" sceneMemberID="viewController">
@@ -908,7 +920,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wqx-Nr-2Ig"/>
                     </view>
-                    <navigationItem key="navigationItem" title="마이페이지" id="kON-u8-LGo">
+                    <navigationItem key="navigationItem" id="kON-u8-LGo">
                         <barButtonItem key="rightBarButtonItem" image="icSetDark32" id="K8a-8G-vmk">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>

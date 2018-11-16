@@ -22,10 +22,19 @@ class SellerInfoVC: UIViewController {
         super.viewDidLoad()
         setupTbV()
         setupView()
+        setupNavi()
+        
+    }
+    
+    private func setupNavi() {
+        let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
+        
+        navigationItem.titleView = imv
     }
     private func setupView() {
         sellerImgV.applyRadius(radius: 40)
         rightBar.isHidden = true
+        self.title = "판매자 정보"
         
     }
     private func setupTbV() {
