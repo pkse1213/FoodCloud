@@ -10,7 +10,6 @@ import UIKit
 
 class MainFoodFeedVC: UIViewController {
     @IBOutlet weak var FoodFeedTvC: UITableView!
-    var myAddress: Address?
     
     var x = 127.05000538145993
     var y = 37.556525987653195
@@ -19,23 +18,10 @@ class MainFoodFeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupView()
-        setNoti()
     }
     
-    private func setNoti() {
-        let center = NotificationCenter.default
-        center.addObserver(self, selector: #selector(setAddress(noti:)), name: NSNotification.Name("setAddress") , object: nil)
-    }
-    
-    private func setupView() {
+    @IBAction func filterAction(_ sender: UISegmentedControl) {
         
-    }
-    
-    @objc func setAddress(noti:Notification) {
-        if let address = noti.object as? Address{
-            self.myAddress = address
-        }
     }
     
     private func setupTableView(){

@@ -11,8 +11,8 @@ import UIKit
 class LocationSearchVC: UIViewController {
     
     let cellId = "LocationSearchCell"
-    var addressArr = [ "서울시 은평구 대조동 84-32" ,"서울시 마포구 연남동 364-8", "홍익대학교 서울캠퍼스"]
-    var roadArr = ["서울 은평구 통일로71가길 27-15", "서울 마포구 연남로 83", "서울 마포구 와우산로 231"]
+    var addressArr =  [ "서울시 은평구 대조동 84-32" ,"서울시 마포구 연남동 364-8", "홍익대학교 서울캠퍼스", "서울시 은평구 역촌동 82-21"]
+    var roadArr = ["서울 은평구 통일로71가길 27-15", "서울 마포구 연남로 83", "서울 마포구 와우산로 231", "서울 은평구 통일로 21가길 30"]
     var searchAddress: [Address] = []
     var flag = false
     
@@ -24,10 +24,9 @@ class LocationSearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
-    
     private func setupView() {
+        self.title = "주소 검색"
         searchTableView.delegate = self
         searchTableView.dataSource = self
         searchBarView.applyRadius(radius: 17.5)
@@ -35,11 +34,6 @@ class LocationSearchVC: UIViewController {
         searchTableView.separatorStyle = .none
         searchBarTxtFd.addTarget(self, action: #selector(search(_:)), for: .editingChanged)
         searchBarTxtFd.addTarget(self, action: #selector(changeResultTitle(_:)), for: .editingChanged)
-    }
-    
-    @IBAction func cancelAction(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-        
     }
     
     @objc func search(_ sender: UITextField) {
@@ -64,10 +58,11 @@ class LocationSearchVC: UIViewController {
             searchResultTitle.textColor = UIColor.rgb(red: 112, green: 112, blue: 112)
             searchResultTitle.text = "최근 주소"
         } else {
-            searchResultTitle.textColor = UIColor.rgb(red: 82, green: 156, blue: 119)
+            searchResultTitle.textColor = #colorLiteral(red: 1, green: 0.4916750789, blue: 0, alpha: 1)
             searchResultTitle.text = "주소 검색 결과 \"" + gsno(sender.text) + "\""
         }
     }
+    
 }
 
 extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
@@ -82,6 +77,7 @@ extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
         } else {
             return searchAddress.count
         }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,16 +100,13 @@ extension LocationSearchVC: UITableViewDelegate, UITableViewDataSource {
     
     @objc func deleteCellFromButton(button: UIButton) {
         addressArr.remove(at: button.tag)
-        roadArr.remove(at: button.tag)
         searchTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(searchAddress[indexPath.row].x)
-        print(searchAddress[indexPath.row].y)
-        NotificationCenter.default.post(name: Notification.Name("setAddress"), object: searchAddress[indexPath.row])
-        self.dismiss(animated: true, completion: nil)
-        
+        if flag {
+            NotificationCenter.default.post(name: Notification.Name("setAddress"), object: searchAddress[indexPath.row])
+            self.navigationController?.popViewController(animated: true)
+        }
     }
-    
 }

@@ -15,7 +15,8 @@ class MessageVC: UIViewController {
     @IBOutlet weak var messageRootView: UIView!
     @IBOutlet weak var textViewBottom: NSLayoutConstraint!
     
-    var messageArr = ["상품 거래가 확정되었습니다."]
+    
+    var messageArr = ["냉장고 꺼내기 확정 완료! 🤗"]
     var dateArr = [String]() {
         didSet {
             messageTableView.reloadData()
@@ -24,11 +25,15 @@ class MessageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         appendDate()
-        
+        self.title = "메세지"
         messageView.applyRadius(radius: messageView.frame.height/2)
-        messageView.applyBorder(width: 1, color: #colorLiteral(red: 0.6784313725, green: 0.6784313725, blue: 0.6784313725, alpha: 1))
+        messageView.applyBorder(width: 1, color: #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1))
         setupTableView()
         setupTextView()
+    }
+    @IBAction func cancelAction(_ sender: UIButton) {
+        NotificationCenter.default.post(name: Notification.Name("backAction"), object:nil)
+        self.dismiss(animated: true)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

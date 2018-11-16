@@ -17,10 +17,11 @@ class RecieveMessageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         messageTextView.sizeToFit()
         messageView.layer.masksToBounds = true
         messageView.layer.cornerRadius = 10
-        
+        messageView.applyBorder(width: 1, color: #colorLiteral(red: 0.7843137255, green: 0.7843137255, blue: 0.7843137255, alpha: 1))
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = 18
     }

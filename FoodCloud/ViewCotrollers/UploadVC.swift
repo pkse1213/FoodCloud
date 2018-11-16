@@ -9,25 +9,64 @@
 import UIKit
 
 class UploadVC: UIViewController {
-
+    @IBOutlet weak var nameLbl: UITextField!
+    @IBOutlet weak var expireLbl: UITextField!
+    @IBOutlet weak var infoLbl: UITextField!
+    @IBOutlet weak var timeLbl: UITextField!
+    @IBOutlet weak var addressTxf: UITextField!
+    var myAddress: Address? {
+        didSet {
+            addressTxf.text = myAddress?.placeName
+        }
+    }
+    @IBOutlet weak var imgClV: UICollectionView!
     let imagePicker : UIImagePickerController = UIImagePickerController()
     var imageArr: [UIImage] = [] {
         didSet {
             imgClV.reloadData()
-        
         }
     }
-    @IBOutlet weak var imgClV: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupClV()
+        setNoti()
     }
+    
     private func setupClV() {
         self.imgClV.delegate = self
         self.imgClV.dataSource = self
     }
     
+    @IBAction func uploadAction(_ sender: UIBarButtonItem) {
+        reset()
+        
+    }
+    private func reset() {
+        nameLbl.text = ""
+        expireLbl.text = ""
+        infoLbl.text = ""
+        timeLbl.text = ""
+        addressTxf.text = ""
+        imageArr.removeAll()
+        self.tabBarController?.selectedIndex = 0
+    }
+    
+    private func setNoti() {
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(setAddress(noti:)), name: NSNotification.Name("setAddress") , object: nil)
+    }
+    
+    @objc func setAddress(noti:Notification) {
+        if let address = noti.object as? Address{
+            self.myAddress = address
+        }
+    }
+    
+    @IBAction func locationAction(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Address", bundle: nil).instantiateViewController(withIdentifier: "LocationSearchVC") as! LocationSearchVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension UploadVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -41,6 +80,9 @@ extension UploadVC: UICollectionViewDelegate, UICollectionViewDataSource {
         if indexPath.item != 0 {
             cell.uploadImgV.image = #imageLiteral(resourceName: "imgNullimg")
             cell.isUserInteractionEnabled = false
+        } else {
+            cell.uploadImgV.image = #imageLiteral(resourceName: "imgAddimg")
+            cell.isUserInteractionEnabled = true
         }
         if imageArr.count > 0 && indexPath.item == 0 {
             cell.uploadImgV.image = imageArr[indexPath.item]

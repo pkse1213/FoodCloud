@@ -9,11 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="NanumSquareOTFRegular.otf">
-            <string>NanumSquareOTFR</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--MessageVC-->
         <scene sceneID="bds-aF-dML">
@@ -24,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-MR-haP">
-                                <rect key="frame" x="0.0" y="20" width="375" height="579"/>
+                                <rect key="frame" x="0.0" y="63" width="375" height="544"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SendMessageCell" rowHeight="92" id="6lH-Nb-jCr" customClass="SendMessageCell" customModule="FoodCloud" customModuleProvider="target">
@@ -35,28 +30,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WBN-ws-mPX">
-                                                    <rect key="frame" x="85.5" y="20" width="274.5" height="72"/>
+                                                    <rect key="frame" x="92.5" y="20" width="267.5" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월요일, 10:40 am" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weU-3r-775">
-                                                            <rect key="frame" x="172.5" y="50" width="88" height="14"/>
+                                                            <rect key="frame" x="168.5" y="50" width="85" height="14"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="14" id="POQ-er-Inn"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="textColor" red="0.10980392156862745" green="0.13725490196078433" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-4T-Kfg">
-                                                            <rect key="frame" x="16" y="15" width="242.5" height="31"/>
+                                                            <rect key="frame" x="16" y="15" width="235.5" height="31"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="WO1-Qd-s9b"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <color key="textColor" red="0.10980392156862745" green="0.13725490196078433" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.32156862749999998" green="0.61176470589999998" blue="0.46666666670000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="0Kj-4T-Kfg" secondAttribute="trailing" constant="16" id="4FB-s7-dj4"/>
                                                         <constraint firstAttribute="bottom" secondItem="weU-3r-775" secondAttribute="bottom" constant="8" id="5f9-d9-pRB"/>
@@ -91,11 +86,11 @@
                                                     <rect key="frame" x="61" y="20" width="152" height="72"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월요일, 10:40 am" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7T-w2-rOY">
-                                                            <rect key="frame" x="50" y="50" width="88" height="14"/>
+                                                            <rect key="frame" x="53" y="50" width="85" height="14"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="14" id="4nT-6w-x8d"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="textColor" red="0.10980392160000001" green="0.13725490200000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -104,12 +99,12 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="2k3-Pg-Iln"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <color key="textColor" red="0.10980392160000001" green="0.13725490200000001" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.48916416950000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="zUC-Cl-xdV" firstAttribute="top" secondItem="6Q4-pZ-jBg" secondAttribute="top" constant="15" id="1K1-NC-0JY"/>
                                                         <constraint firstAttribute="bottom" secondItem="t7T-w2-rOY" secondAttribute="bottom" constant="8" id="8SD-yN-8by"/>
@@ -147,14 +142,14 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uez-KN-CLG">
-                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkh-DX-J4O">
-                                        <rect key="frame" x="312" y="10" width="48" height="48"/>
+                                        <rect key="frame" x="312" y="6" width="48" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vkh-DX-J4O" secondAttribute="height" multiplier="1:1" id="rhL-of-l5O"/>
                                         </constraints>
-                                        <state key="normal" title="보내기">
+                                        <state key="normal" image="icMessageActive32">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
@@ -162,46 +157,62 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWp-ax-NRJ">
-                                        <rect key="frame" x="17" y="10" width="290" height="48"/>
+                                        <rect key="frame" x="17" y="11" width="290" height="38"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fPT-QX-khW">
-                                                <rect key="frame" x="23" y="10" width="244" height="30"/>
+                                                <rect key="frame" x="23" y="10" width="244" height="20"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="fPT-QX-khW" secondAttribute="bottom" constant="8" id="HbD-nW-BPb"/>
                                             <constraint firstItem="fPT-QX-khW" firstAttribute="leading" secondItem="hWp-ax-NRJ" secondAttribute="leading" constant="23" id="Ncq-O4-og2"/>
                                             <constraint firstAttribute="trailing" secondItem="fPT-QX-khW" secondAttribute="trailing" constant="23" id="QsN-Py-U4e"/>
-                                            <constraint firstAttribute="height" constant="48" id="RdT-aW-YNj"/>
+                                            <constraint firstAttribute="height" constant="38" id="RdT-aW-YNj"/>
                                             <constraint firstItem="fPT-QX-khW" firstAttribute="top" secondItem="hWp-ax-NRJ" secondAttribute="top" constant="10" id="uIa-qa-I57"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="vkh-DX-J4O" firstAttribute="leading" secondItem="hWp-ax-NRJ" secondAttribute="trailing" constant="5" id="E2M-P6-NI5"/>
-                                    <constraint firstItem="hWp-ax-NRJ" firstAttribute="top" secondItem="uez-KN-CLG" secondAttribute="top" constant="10" id="GWp-ep-zdo"/>
                                     <constraint firstAttribute="trailing" secondItem="vkh-DX-J4O" secondAttribute="trailing" constant="15" id="NFh-6o-xps"/>
-                                    <constraint firstAttribute="height" constant="68" id="NWk-iK-YOF"/>
-                                    <constraint firstAttribute="bottom" secondItem="hWp-ax-NRJ" secondAttribute="bottom" constant="10" id="cCa-IE-YpN"/>
+                                    <constraint firstAttribute="height" constant="60" id="NWk-iK-YOF"/>
                                     <constraint firstItem="hWp-ax-NRJ" firstAttribute="centerY" secondItem="uez-KN-CLG" secondAttribute="centerY" id="cGr-D3-4nk"/>
                                     <constraint firstItem="vkh-DX-J4O" firstAttribute="width" secondItem="uez-KN-CLG" secondAttribute="width" multiplier="48:375" id="q3o-x1-E01"/>
                                     <constraint firstItem="hWp-ax-NRJ" firstAttribute="leading" secondItem="uez-KN-CLG" secondAttribute="leading" constant="17" id="sen-aQ-zuf"/>
                                     <constraint firstItem="vkh-DX-J4O" firstAttribute="centerY" secondItem="uez-KN-CLG" secondAttribute="centerY" id="tEp-1D-NAv"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메세지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="919-ah-JwW">
+                                <rect key="frame" x="162.5" y="30" width="50" height="23"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcw-df-wOB">
+                                <rect key="frame" x="333" y="24" width="28" height="28"/>
+                                <state key="normal" image="icCloseOrange28"/>
+                                <connections>
+                                    <action selector="cancelAction:" destination="hHr-bl-2hH" eventType="touchUpInside" id="anU-aN-zzH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NxL-VU-Wab" firstAttribute="trailing" secondItem="Qcw-df-wOB" secondAttribute="trailing" constant="14" id="4eM-2m-AHx"/>
+                            <constraint firstItem="IUd-MR-haP" firstAttribute="top" secondItem="919-ah-JwW" secondAttribute="bottom" constant="10" id="Ag0-UL-ESs"/>
                             <constraint firstItem="IUd-MR-haP" firstAttribute="leading" secondItem="NxL-VU-Wab" secondAttribute="leading" id="BYb-wA-CB4"/>
                             <constraint firstItem="uez-KN-CLG" firstAttribute="trailing" secondItem="NxL-VU-Wab" secondAttribute="trailing" id="De1-q1-21O"/>
-                            <constraint firstItem="IUd-MR-haP" firstAttribute="top" secondItem="NxL-VU-Wab" secondAttribute="top" id="KdI-Kc-0kx"/>
+                            <constraint firstItem="919-ah-JwW" firstAttribute="centerX" secondItem="mGS-ks-e0P" secondAttribute="centerX" id="Tiz-mc-zKO"/>
+                            <constraint firstItem="919-ah-JwW" firstAttribute="top" secondItem="NxL-VU-Wab" secondAttribute="top" constant="10" id="TzQ-GY-Ea0"/>
                             <constraint firstItem="uez-KN-CLG" firstAttribute="leading" secondItem="NxL-VU-Wab" secondAttribute="leading" id="hIV-Ql-xRE"/>
                             <constraint firstAttribute="bottom" secondItem="uez-KN-CLG" secondAttribute="bottom" id="ju4-jM-9dC"/>
                             <constraint firstItem="IUd-MR-haP" firstAttribute="trailing" secondItem="NxL-VU-Wab" secondAttribute="trailing" id="wKY-vZ-3i5"/>
+                            <constraint firstItem="Qcw-df-wOB" firstAttribute="top" secondItem="NxL-VU-Wab" secondAttribute="top" constant="4" id="xFj-G0-txM"/>
                             <constraint firstItem="uez-KN-CLG" firstAttribute="top" secondItem="IUd-MR-haP" secondAttribute="bottom" id="xjv-g5-VVO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NxL-VU-Wab"/>
@@ -219,4 +230,8 @@
             <point key="canvasLocation" x="-280.80000000000001" y="-18.440779610194905"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icCloseOrange28" width="28" height="28"/>
+        <image name="icMessageActive32" width="32" height="32"/>
+    </resources>
 </document>

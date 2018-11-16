@@ -34,8 +34,8 @@ extension GoneFoodFeedVC: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Food+Person", bundle: nil).instantiateViewController(withIdentifier: "FoodDetailVC") as! FoodDetailVC
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let vc = UIStoryboard(name: "Food+Person", bundle: nil).instantiateViewController(withIdentifier: "FoodDetailVC") as! FoodDetailVC
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
 }

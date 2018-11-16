@@ -11,9 +11,12 @@ import UIKit
 class SellerInfoVC: UIViewController {
     @IBOutlet weak var leftBar: UIView!
     @IBOutlet weak var rightBar: UIView!
-    @IBOutlet weak var tabView: UIView!
     @IBOutlet weak var infoTbV: UITableView!
     @IBOutlet weak var sellerImgV: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var infoLbl: UILabel!
+    @IBOutlet weak var leftBtn: UIButton!
+    @IBOutlet weak var rightBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +24,7 @@ class SellerInfoVC: UIViewController {
         setupView()
     }
     private func setupView() {
-        tabView.applyRadius(radius: 10)
-        infoTbV.applyRadius(radius: 10)
+        sellerImgV.applyRadius(radius: 40)
         rightBar.isHidden = true
         
     }
@@ -34,12 +36,15 @@ class SellerInfoVC: UIViewController {
     @IBAction func foodListAction(_ sender: Any) {
         rightBar.isHidden = true
         leftBar.isHidden = false
+        leftBtn.setTitleColor(#colorLiteral(red: 1, green: 0.4916750789, blue: 0, alpha: 1), for: .normal)
+        rightBtn.setTitleColor(#colorLiteral(red: 0.8469749093, green: 0.8471175432, blue: 0.8469561338, alpha: 1), for: .normal)
     }
     
     @IBAction func reviewAction(_ sender: Any) {
         rightBar.isHidden = false
         leftBar.isHidden = true
-        
+        leftBtn.setTitleColor(#colorLiteral(red: 0.8469749093, green: 0.8471175432, blue: 0.8469561338, alpha: 1), for: .normal)
+        rightBtn.setTitleColor(#colorLiteral(red: 1, green: 0.4916750789, blue: 0, alpha: 1), for: .normal)
     }
     
 }
@@ -55,6 +60,5 @@ extension SellerInfoVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
     
 }
