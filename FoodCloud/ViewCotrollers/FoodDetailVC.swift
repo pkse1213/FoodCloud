@@ -10,21 +10,25 @@ import UIKit
 
 class FoodDetailVC: UIViewController {
 
+    @IBOutlet weak var foodDetailTbV: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTbV()
+    }
+    private func setupTbV() {
+        self.foodDetailTbV.delegate = self
+        self.foodDetailTbV.dataSource = self
+    }
+}
+extension FoodDetailVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = foodDetailTbV.dequeueReusableCell(withIdentifier: "FoodDetailCell") as! FoodDetailCell
+        return cell
     }
-    */
-
+    
+    
 }
