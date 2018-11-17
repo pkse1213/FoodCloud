@@ -12,7 +12,7 @@ class FoodDetailVC: UIViewController {
 
     var disFood: FoodByDis?
     var timeFood: FoodByTime?
-    
+    var userId = 0
     @IBOutlet weak var foodDetailTbV: UITableView!
     
     override func viewDidLoad() {
@@ -46,8 +46,10 @@ class FoodDetailVC: UIViewController {
         let vc = UIStoryboard(name: "Message", bundle: nil).instantiateViewController(withIdentifier: "MessageVC") as! MessageVC
        self.present(vc, animated: true)
     }
+    
     @IBAction func sellerAction(_ sender: UIButton) {
         let vc = UIStoryboard(name: "Food+Person", bundle: nil).instantiateViewController(withIdentifier: "SellerInfoVC") as! SellerInfoVC
+        vc.userId = self.userId
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -62,20 +64,22 @@ extension FoodDetailVC: UITableViewDataSource, UITableViewDelegate {
         let cell = foodDetailTbV.dequeueReusableCell(withIdentifier: "FoodDetailCell") as! FoodDetailCell
         if let food = disFood {
             cell.nameLbl.text = food.userName
-            cell.imageBtn.imageView?.imageFromUrl(food.userProfile, defaultImgPath: "")
+            cell.photoImgV.imageFromUrl(food.userProfile, defaultImgPath: "")
             cell.foodNameLbl.text = food.postsTitle
             cell.expireLbl.text = "유통기한: " + food.postsExpire
             cell.foodImgV.imageFromUrl(food.postsImg, defaultImgPath: "")
             cell.timeLbl.text = "일요일 오후 4시"
             cell.infoLbl.text = food.postsInfo
+            self.userId = food.userID
         } else if let food = timeFood {
             cell.nameLbl.text = food.userName
-            cell.imageBtn.imageView?.imageFromUrl(food.userProfile, defaultImgPath: "")
+            cell.photoImgV.imageFromUrl(food.userProfile, defaultImgPath: "")
             cell.foodNameLbl.text = food.postsTitle
             cell.expireLbl.text = "유통기한: " + food.postsExpire
             cell.foodImgV.imageFromUrl(food.postsImg, defaultImgPath: "")
             cell.timeLbl.text = "일요일 오후 4시"
             cell.infoLbl.text = food.postsInfo
+            self.userId = food.userID
         }
         return cell
     }

@@ -10,11 +10,13 @@ import UIKit
 
 class SellerInfoFoodCell: UITableViewCell {
 
-    @IBOutlet weak var sqaureView: UIView!
     @IBOutlet weak var foodImgV: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var infoLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        foodImgV.applyRadius(radius: 10)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

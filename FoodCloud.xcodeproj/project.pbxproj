@@ -47,6 +47,7 @@
 		CBBB3E65219F84AA00CB0F88 /* FoodByDistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E64219F84AA00CB0F88 /* FoodByDistanceService.swift */; };
 		CBBB3E67219F8F3F00CB0F88 /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E66219F8F3F00CB0F88 /* UserInfoData.swift */; };
 		CBBB3E69219F8F6D00CB0F88 /* UserInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E68219F8F6D00CB0F88 /* UserInfoService.swift */; };
+		CBBB3E6B219F937200CB0F88 /* MessageListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBB3E6A219F937200CB0F88 /* MessageListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		CBBB3E64219F84AA00CB0F88 /* FoodByDistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodByDistanceService.swift; sourceTree = "<group>"; };
 		CBBB3E66219F8F3F00CB0F88 /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
 		CBBB3E68219F8F6D00CB0F88 /* UserInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoService.swift; sourceTree = "<group>"; };
+		CBBB3E6A219F937200CB0F88 /* MessageListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				CB1F3C2A219DDD3800035F0F /* GoneFoodFeedVC.swift */,
 				CB1F3C2C219DDD4600035F0F /* UploadVC.swift */,
 				CB1F3C33219DE0C000035F0F /* MessageVC.swift */,
+				CBBB3E6A219F937200CB0F88 /* MessageListVC.swift */,
 				CB3A989A219E9637006DF777 /* LocationSearchVC.swift */,
 				CB3A98A2219EE0B5006DF777 /* SellerInfoVC.swift */,
 				CB3A98A8219F038B006DF777 /* FoodDetailVC.swift */,
@@ -367,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBB3E6B219F937200CB0F88 /* MessageListVC.swift in Sources */,
 				CB3A989D219E9673006DF777 /* AddressData.swift in Sources */,
 				CB3A98A9219F038B006DF777 /* FoodDetailVC.swift in Sources */,
 				CB1F3C21219DDC1600035F0F /* HTTPStatusCode.swift in Sources */,
@@ -547,12 +551,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G77BD49J67;
 				INFOPLIST_FILE = FoodCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pkse1213.FoodCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = k45yhjg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -565,12 +571,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G77BD49J67;
 				INFOPLIST_FILE = FoodCloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pkse1213.FoodCloud;
+				PRODUCT_BUNDLE_IDENTIFIER = k45yhjg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

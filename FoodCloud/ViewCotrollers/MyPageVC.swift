@@ -10,6 +10,7 @@ import UIKit
 
 class MyPageVC: UIViewController {
 
+    @IBOutlet weak var listTbV: UITableView!
     @IBOutlet weak var profileImgV: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var infoLbl: UILabel!
@@ -20,12 +21,32 @@ class MyPageVC: UIViewController {
     @IBOutlet weak var leftLbl: UILabel!
     @IBOutlet weak var rightLbl: UILabel!
     
+    var userId = 5{
+        didSet{
+            initData()
+        }
+    }
+    var info: UserInfo? {
+        didSet {
+            listTbV.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavi()
-        
+        listTbV.delegate = self
+        listTbV.dataSource = self
+        initData()
     }
-    
+    private func initData() {
+        UserInfoService.shareInstance.getUserInfoe(id: userId, completion: { (UserInfo) in
+            self.info = UserInfo
+            
+        }) { (err) in
+            print("user info 에러")
+        }
+    }
     private func setupNavi() {
         let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
         
@@ -37,6 +58,7 @@ class MyPageVC: UIViewController {
     }
     
     @IBAction func tapAction(_ sender: UIButton) {
+        userId = sender.tag+4
         if sender.tag == 1 {
             leftBtn.setImage(#imageLiteral(resourceName: "foodInActive"), for: .normal)
             middleBtn.setImage(#imageLiteral(resourceName: "foodOutInactive"), for: .normal)
@@ -65,4 +87,26 @@ class MyPageVC: UIViewController {
     }
     
    
+}
+
+extension MyPageVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let seller = info else {return 0}
+        
+        return seller.posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+            let cell = listTbV.dequeueReusableCell(withIdentifier: "SellerInfoFoodCell") as! SellerInfoFoodCell
+            guard let seller = info else {return cell}
+            let food = seller.posts[indexPath.row]
+            cell.foodImgV.imageFromUrl(food.postsImg, defaultImgPath: "")
+            cell.nameLbl.text = food.postsTitle
+            cell.infoLbl.text = food.postsInfo
+            return cell
+        
+        
+    }
+    
 }

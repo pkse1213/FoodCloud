@@ -15,7 +15,6 @@ class MessageVC: UIViewController {
     @IBOutlet weak var messageRootView: UIView!
     @IBOutlet weak var textViewBottom: NSLayoutConstraint!
     
-    
     var messageArr = ["냉장고 꺼내기 확정 완료! 🤗"]
     var dateArr = [String]() {
         didSet {
@@ -37,7 +36,6 @@ class MessageVC: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.isHidden = false
     }
     func appendDate() {
         let dateFommatter = DateFormatter()

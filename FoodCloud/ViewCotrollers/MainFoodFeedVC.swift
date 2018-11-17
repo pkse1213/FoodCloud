@@ -45,6 +45,10 @@ class MainFoodFeedVC: UIViewController {
             dataByDistance()
         }
     }
+    @IBAction func messageAction(_ sender: UIBarButtonItem) {
+        let vc = UIStoryboard(name: "Message", bundle: nil).instantiateViewController(withIdentifier: "MessageListVC") as! MessageListVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     private func setupTableView(){
         foodFeedTvC.delegate = self

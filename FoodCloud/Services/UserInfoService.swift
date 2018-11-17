@@ -16,7 +16,7 @@ struct UserInfoService: APIService, RequestService{
     let URL = url("/users")
     typealias NetworkData = UserInfoData
     
-    func getListByDistance(id: Int, completion: @escaping (UserInfo) -> Void, error: @escaping (Int) -> Void) {
+    func getUserInfoe(id: Int, completion: @escaping (UserInfo) -> Void, error: @escaping (Int) -> Void) {
         let userURL = URL + "/\(id)"
         
         gettable(userURL, body: nil, header: nil) { res in

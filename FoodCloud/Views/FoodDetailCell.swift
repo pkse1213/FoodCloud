@@ -10,6 +10,7 @@ import UIKit
 
 class FoodDetailCell: UITableViewCell {
     
+    @IBOutlet weak var photoImgV: UIImageView!
     @IBOutlet weak var imageBtn: UIButton!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var foodNameLbl: UILabel!
@@ -28,7 +29,7 @@ class FoodDetailCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageBtn.applyRadius(radius: 22)
+        photoImgV.applyRadius(radius: 22)
         foodImgV.applyRadius(radius: 15)
     }
 

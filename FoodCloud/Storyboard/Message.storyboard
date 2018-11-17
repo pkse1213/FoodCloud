@@ -114,9 +114,8 @@
                                                         <constraint firstItem="t7T-w2-rOY" firstAttribute="top" secondItem="zUC-Cl-xdV" secondAttribute="bottom" constant="4" id="wKf-n4-nUl"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lCu-vc-5g6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgUserInfoProfile" translatesAutoresizingMaskIntoConstraints="NO" id="lCu-vc-5g6">
                                                     <rect key="frame" x="15" y="20" width="36" height="36"/>
-                                                    <color key="backgroundColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="TYV-Df-dJM"/>
                                                         <constraint firstAttribute="width" constant="36" id="ofO-Fc-TGa"/>
@@ -229,9 +228,36 @@
             </objects>
             <point key="canvasLocation" x="-280.80000000000001" y="-18.440779610194905"/>
         </scene>
+        <!--Message ListVC-->
+        <scene sceneID="1f2-BA-69m">
+            <objects>
+                <viewController storyboardIdentifier="MessageListVC" id="XaU-gP-oSR" customClass="MessageListVC" customModule="FoodCloud" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b8A-wN-RhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="imgChat" translatesAutoresizingMaskIntoConstraints="NO" id="vsO-vN-vM3">
+                                <rect key="frame" x="0.0" y="32" width="375" height="327"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vsO-vN-vM3" firstAttribute="leading" secondItem="4Ml-a0-eWY" secondAttribute="leading" id="CyF-aK-2L9"/>
+                            <constraint firstAttribute="trailing" secondItem="vsO-vN-vM3" secondAttribute="trailing" id="SIE-k4-b2J"/>
+                            <constraint firstItem="vsO-vN-vM3" firstAttribute="top" secondItem="4Ml-a0-eWY" secondAttribute="top" constant="12" id="qdY-0e-lS2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Ml-a0-eWY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKK-oQ-qpk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="-18"/>
+        </scene>
     </scenes>
     <resources>
         <image name="icCloseOrange28" width="28" height="28"/>
         <image name="icMessageActive32" width="32" height="32"/>
+        <image name="imgChat" width="375" height="327"/>
+        <image name="imgUserInfoProfile" width="80" height="80"/>
     </resources>
 </document>

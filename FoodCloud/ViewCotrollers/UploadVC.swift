@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UploadVC: UIViewController {
+class UploadVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameLbl: UITextField!
     @IBOutlet weak var expireLbl: UITextField!
     @IBOutlet weak var infoLbl: UITextField!
@@ -32,9 +32,42 @@ class UploadVC: UIViewController {
         setupClV()
         setNoti()
         setupNavi()
-        
+        setupTextView()
     }
     
+    private func setupTextView() {
+        infoLbl.delegate = self
+        nameLbl.delegate = self
+        expireLbl.delegate = self
+        timeLbl.delegate = self
+        
+//        let tapDidsmiss = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+//        self.view.addGestureRecognizer(tapDidsmiss)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func dismissKeyboard() {
+        infoLbl.resignFirstResponder()
+    }
+//
+//    @objc func keyboardWillShow(_ sender: Notification) {
+//        if let keyboardFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//            let keyboardRectangle = keyboardFrame.cgRectValue
+//            let keyboardHeight = keyboardRectangle.height
+//            self.view.frame.origin.y = -keyboardHeight
+//        }
+//    }
+//
+//    @objc func keyboardWillHide(_ sender: Notification) {
+//        self.view.frame.origin.y = 0
+//
+//    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
     private func setupNavi() {
         let imv: UIImageView = UIImageView(image: #imageLiteral(resourceName: "imgLogo"))
         
