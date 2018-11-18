@@ -277,9 +277,6 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRT-gq-CV0">
                                                             <rect key="frame" x="269" y="288" width="32" height="32"/>
                                                             <state key="normal" image="icShareUi32"/>
-                                                            <connections>
-                                                                <action selector="likeAction:" destination="dvS-0Y-TK2" eventType="touchUpInside" id="wfU-tY-W14"/>
-                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="박세은" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ss-AH-Q5f">
                                                             <rect key="frame" x="56" y="293" width="39" height="18"/>
