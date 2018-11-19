@@ -1096,11 +1096,11 @@
             </objects>
             <point key="canvasLocation" x="-458.39999999999998" y="1683.5082458770617"/>
         </scene>
-        <!--이벤드-->
+        <!--이벤트-->
         <scene sceneID="ldj-cS-FsM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KZV-ef-WFi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="이벤드" image="icGiftUi32" id="6Kj-3N-OFu"/>
+                    <tabBarItem key="tabBarItem" title="이벤트" image="icGiftUi32" id="6Kj-3N-OFu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vyJ-yK-mJe">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
